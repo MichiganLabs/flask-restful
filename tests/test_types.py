@@ -125,6 +125,12 @@ class TypesTestCase(unittest.TestCase):
         assert_equal(types.boolean("FaLSE"), False)
 
 
+    def test_boolean_with_python_bool(self):
+        """Input that is already a native python `bool` should be passed through
+        without extra processing."""
+        assert_equal(inputs.boolean(True), True)
+        assert_equal(inputs.boolean(False), False)
+
     def test_bad_boolean(self):
         assert_raises(ValueError, lambda: types.boolean("blah"))
 
