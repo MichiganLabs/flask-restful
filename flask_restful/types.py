@@ -210,9 +210,9 @@ def boolean(value):
         raise ValueError("boolean type must be non-null")
 
     value = value.lower()
-    if value == 'true':
+    if value in ('true', '1',):
         return True
-    if value == 'false':
+    if value in ('false', '0',):
         return False
     raise ValueError("Invalid literal for boolean(): {}".format(value))
 

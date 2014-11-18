@@ -113,9 +113,15 @@ class TypesTestCase(unittest.TestCase):
         assert_equal(types.boolean("False"), False)
 
 
+    def test_boolean_is_false_for_0(self):
+        assert_equal(inputs.boolean("0"), False)
+
     def test_boolean_true(self):
         assert_equal(types.boolean("true"), True)
 
+
+    def test_boolean_is_true_for_1(self):
+        assert_equal(inputs.boolean("1"), True)
 
     def test_boolean_upper_case(self):
         assert_equal(types.boolean("FaLSE"), False)
