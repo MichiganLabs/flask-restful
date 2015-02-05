@@ -114,14 +114,14 @@ class TypesTestCase(unittest.TestCase):
 
 
     def test_boolean_is_false_for_0(self):
-        assert_equal(inputs.boolean("0"), False)
+        assert_equal(types.boolean("0"), False)
 
     def test_boolean_true(self):
         assert_equal(types.boolean("true"), True)
 
 
     def test_boolean_is_true_for_1(self):
-        assert_equal(inputs.boolean("1"), True)
+        assert_equal(types.boolean("1"), True)
 
     def test_boolean_upper_case(self):
         assert_equal(types.boolean("FaLSE"), False)
@@ -134,8 +134,8 @@ class TypesTestCase(unittest.TestCase):
     def test_boolean_with_python_bool(self):
         """Input that is already a native python `bool` should be passed through
         without extra processing."""
-        assert_equal(inputs.boolean(True), True)
-        assert_equal(inputs.boolean(False), False)
+        assert_equal(types.boolean(True), True)
+        assert_equal(types.boolean(False), False)
 
     def test_bad_boolean(self):
         assert_raises(ValueError, lambda: types.boolean("blah"))
