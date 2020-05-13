@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='Flask-RESTful',
-    version='0.2.13.2',
+    version='0.2.13.3',
     url='https://www.github.com/twilio/flask-restful/',
     author='Twilio API Team',
     author_email='help@twilio.com',
@@ -15,7 +15,7 @@ setup(
     platforms='any',
     test_suite = 'nose.collector',
     install_requires=[
-        'aniso8601>=0.82',
+        'aniso8601==1.0.0',
         'Flask>=0.8',
         'six>=1.3.0',
         'pytz',
