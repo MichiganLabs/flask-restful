@@ -15,7 +15,7 @@ setup(
     platforms='any',
     test_suite = 'nose.collector',
     install_requires=[
-        'aniso8601>=0.82',
+        'aniso8601==1.0.0',
         'Flask>=0.8',
         'six>=1.3.0',
         'pytz',
